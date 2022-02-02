@@ -54,7 +54,7 @@ def service(c, m):
 @app.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply(PRIVATE, reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Sahibim", url=https://t.me/QuotLyBot")]]))
+        InlineKeyboardButton("Developer", url=https://t.me/elxan")]]))
 
 
 app.run()
