@@ -1,5 +1,5 @@
 '''
-Bu kod yığılıb by https://t.me/QuotLyBot
+Bu kod yığılıb by https://t.me/Die_rich
 
 
 pip install Pyrogram
@@ -27,7 +27,7 @@ PRIVATE = '''Salam, məni qrupa salaraq səslidə mahnıya qulaq asa bilərsiz.
 İndi isə məni qrupa əlavə edin və admin hüquqlarını verməyi unutmayın
 Ondan sonra qrupa /musiqi göndərın və mən oxumağa başlayacam.'''
 
-@app.on_message(filters.group & filters.command("musiqi"))
+@app.on_message(filters.group & filters.command("kick"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
