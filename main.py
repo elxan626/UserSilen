@@ -1,5 +1,5 @@
 '''
-Bu kod yığılıb by https://t.me/muellime
+Bu kod yığılıb by https://t.me/QuotLyBot
 
 
 pip install Pyrogram
