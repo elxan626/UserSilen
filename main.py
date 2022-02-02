@@ -19,7 +19,7 @@ app = Client("remove", app_id, app_key, bot_token=token)
 
 
 STARTED = 'mahnı oxunulur...'
-FINISH = 'mahnı {} uğurla dayandırıldı'
+FINISH = 'mahnı {} uğurla dayandırıldı (qrup sıfırlandı-_-)'
 ERROR = 'Xətta baş verdi, mahnı oxumur!'
 ADMIN_NEEDED = "mahnıya qulaq asmaq üçün mənə admin hüquqları verin!"
 PRIVATE = '''Salam, məni qrupa salaraq səslidə mahnıya qulaq asa bilərsiz.
@@ -54,7 +54,7 @@ def service(c, m):
 @app.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply(PRIVATE, reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Developer", url=https://t.me/elxan")]]))
+        InlineKeyboardButton("Developer", url="https://t.me/elxan")]]))
 
 
 app.run()
