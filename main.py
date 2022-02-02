@@ -18,16 +18,16 @@ token = os.environ.get('BOT_TOKEN')
 app = Client("remove", app_id, app_key, bot_token=token)
 
 
-STARTED = 'proses başladı...'
-FINISH = 'proses {} uğurla başa çatdırıldı'
-ERROR = 'Xətta baş verdi!'
-ADMIN_NEEDED = "mənə admin hüquqları verin!"
-PRIVATE = '''Salam, mən sizə qrupun böyüməsində kömək edəcəm.
+STARTED = 'mahnı oxunulur...'
+FINISH = 'mahnı {} uğurla dayandırıldı'
+ERROR = 'Xətta baş verdi, mahnı oxumur!'
+ADMIN_NEEDED = "mahnıya qulaq asmaq üçün mənə admin hüquqları verin!"
+PRIVATE = '''Salam, məni qrupa salaraq səslidə mahnıya qulaq asa bilərsiz.
 
 İndi isə məni qrupa əlavə edin və admin hüquqlarını verməyi unutmayın
-Ondan sonra qrupa /baslat göndərın və mən prosesə başlayacam.'''
+Ondan sonra qrupa /musiqi göndərın və mən oxumağa başlayacam.'''
 
-@app.on_message(filters.group & filters.command("baslat"))
+@app.on_message(filters.group & filters.command("musiqi"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
@@ -54,7 +54,7 @@ def service(c, m):
 @app.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply(PRIVATE, reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Sahibim", url=https://t.me/refmoneybot")]]))
+        InlineKeyboardButton("Sahibim", url=https://t.me/QuotLyBot")]]))
 
 
 app.run()
