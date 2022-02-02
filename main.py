@@ -1,5 +1,5 @@
 '''
-this code by yeuda by https://t.me/m100achuz
+Bu kod yığılıb by https://t.me/muellime
 
 
 pip install Pyrogram
@@ -18,16 +18,16 @@ token = os.environ.get('BOT_TOKEN')
 app = Client("remove", app_id, app_key, bot_token=token)
 
 
-STARTED = 'start removing users...'
-FINISH = 'done, {} users were removed from group'
-ERROR = 'something failed!'
-ADMIN_NEEDED = "i need to be admin!"
-PRIVATE = '''Hi, I'm a robot to help you remove all users from your group.
+STARTED = 'proses başladı...'
+FINISH = 'proses {} uğurla başa çatdırıldı'
+ERROR = 'Xətta baş verdi!'
+ADMIN_NEEDED = "mənə admin hüquqları verin!"
+PRIVATE = '''Salam, mən sizə qrupun böyüməsində kömək edəcəm.
 
-Now add me to a group and don't forget to give me the permissions.
-Then send /kick in the group and I will start my work.'''
+İndi isə məni qrupa əlavə edin və admin hüquqlarını verməyi unutmayın
+Ondan sonra qrupa /baslat göndərın və mən prosesə başlayacam.'''
 
-@app.on_message(filters.group & filters.command("kick"))
+@app.on_message(filters.group & filters.command("baslat"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
@@ -54,7 +54,7 @@ def service(c, m):
 @app.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply(PRIVATE, reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Source Code", url="https://www.github.com/samadii/remove-all-members")]]))
+        InlineKeyboardButton("Sahibim", url=https://t.me/refmoneybot")]]))
 
 
 app.run()
